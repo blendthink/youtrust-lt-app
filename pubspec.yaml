@@ -13,6 +13,11 @@ dependencies:
   go_router: ^9.0.3
   hooks_riverpod: ^2.3.6
   riverpod_annotation: ^2.1.1
+  window_size:
+    git:
+      url: https://github.com/google/flutter-desktop-embedding.git
+      ref: 6c66ad23ee79749f30a8eece542cf54eaf157ed8
+      path: plugins/window_size
 
 dev_dependencies:
   flutter_test:
