@@ -5,15 +5,19 @@ version: 0.1.0
 
 environment:
   sdk: '>=3.1.0-163.1.beta <4.0.0'
+  flutter: '>=3.12.0-1.1.pre'
 
 dependencies:
   flutter:
     sdk: flutter
+  go_router: ^9.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  build_runner: ^2.4.6
+  go_router_builder: ^2.2.0
 
 flutter:
   uses-material-design: true
