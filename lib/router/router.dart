@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:youtrust_lt_app/slides/introduction_slide.dart';
 import 'package:youtrust_lt_app/slides/title_slide.dart';
 
 part 'router.g.dart';
@@ -18,4 +19,15 @@ class TitleRoute extends GoRouteData {
 
   @override
   Widget build(BuildContext context, GoRouterState state) => const TitleSlide();
+}
+
+@TypedGoRoute<IntroductionRoute>(
+  path: '/1',
+)
+class IntroductionRoute extends GoRouteData {
+  const IntroductionRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const IntroductionSlide();
 }
