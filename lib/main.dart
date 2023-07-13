@@ -12,7 +12,7 @@ void main() {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  const double width = 1280;
+  const double width = 600;
   const double height = width / 16 * 9;
   setWindowMinSize(const Size(width, height));
 
