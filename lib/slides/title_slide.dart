@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:youtrust_lt_app/components/scaler_gap.dart';
 import 'package:youtrust_lt_app/router/router.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/title/event_name.dart';
+import 'package:youtrust_lt_app/slides/title/speaker_name.dart';
+import 'package:youtrust_lt_app/slides/title/title_shader.dart';
 
 class TitleSlide extends StatelessWidget {
   const TitleSlide({super.key});
@@ -15,9 +19,16 @@ class TitleSlide extends StatelessWidget {
       child: const Focus(
         autofocus: true,
         child: Scaffold(
-          backgroundColor: Colors.brown,
-          body: Center(
-            child: Text('TitleSlide'),
+          body: Column(
+            children: [
+              Spacer(),
+              TitleShader(),
+              ScalerGap(12),
+              SpeakerName(),
+              Spacer(),
+              EventName(),
+              ScalerGap(24),
+            ],
           ),
         ),
       ),
