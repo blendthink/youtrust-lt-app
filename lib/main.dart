@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:window_size/window_size.dart';
 import 'package:youtrust_lt_app/app.dart';
+import 'package:youtrust_lt_app/config.dart';
 
 void main() {
   if (!Platform.isMacOS) {
@@ -12,9 +13,7 @@ void main() {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  const double width = 600;
-  const double height = width / 16 * 9;
-  setWindowMinSize(const Size(width, height));
+  setWindowMinSize(appDefaultSize);
 
   runApp(
     const ProviderScope(
