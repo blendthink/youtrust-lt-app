@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtrust_lt_app/components/scaler_text.dart';
 
 class EventName extends StatelessWidget {
   const EventName({super.key});
@@ -6,8 +7,8 @@ class EventName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Text(
-      'YOUTRUST x ゆめみ Flutter LT会@渋谷 #2',
+    return ScalerText(
+      text: 'YOUTRUST x ゆめみ Flutter LT会@渋谷 #2',
       style: theme.textTheme.bodySmall,
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtrust_lt_app/components/scaler_text.dart';
 
 class SpeakerName extends StatelessWidget {
   const SpeakerName({super.key});
@@ -6,8 +7,8 @@ class SpeakerName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Text(
-      'Tatsuya Okayama ( blendthink )',
+    return ScalerText(
+      text: 'Tatsuya Okayama ( blendthink )',
       style: theme.textTheme.labelLarge,
     );
   }
