@@ -8,7 +8,7 @@ class SpeakerNameLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return ScalerText(
-      text: 'Tatsuya Okayama ( blendthink )',
+      text: '@blendthink',
       style: theme.textTheme.labelLarge,
     );
   }
