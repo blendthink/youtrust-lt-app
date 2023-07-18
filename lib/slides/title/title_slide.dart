@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/components/scaler_gap.dart';
-import 'package:youtrust_lt_app/router/router.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
-import 'package:youtrust_lt_app/slides/title/event_name.dart';
 import 'package:youtrust_lt_app/slides/title/speaker_name.dart';
 import 'package:youtrust_lt_app/slides/title/title_shader.dart';
 
@@ -26,8 +25,6 @@ class TitleSlide extends StatelessWidget {
               ScalerGap(12),
               SpeakerName(),
               Spacer(),
-              EventName(),
-              ScalerGap(24),
             ],
           ),
         ),
@@ -52,6 +49,6 @@ class _NextPageAction extends Action<NextPageIntent> {
 
   @override
   void invoke(NextPageIntent intent) {
-    const IntroductionRoute().push(context);
+    context.push('/1');
   }
 }

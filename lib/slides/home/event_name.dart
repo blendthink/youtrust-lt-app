@@ -9,7 +9,7 @@ class EventName extends StatelessWidget {
     final theme = Theme.of(context);
     return ScalerText(
       text: 'YOUTRUST x ゆめみ Flutter LT会@渋谷 #2',
-      style: theme.textTheme.bodySmall,
+      style: theme.textTheme.labelSmall,
     );
   }
 }
