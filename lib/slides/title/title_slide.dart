@@ -12,8 +12,8 @@ class TitleSlide extends StatelessWidget {
   Widget build(BuildContext context) {
     return Actions(
       actions: <Type, Action<Intent>>{
-        BackPageIntent: _BackPageAction(context),
-        NextPageIntent: _NextPageAction(context),
+        BackIntent: _BackAction(context),
+        NextIntent: _NextAction(context),
       },
       child: const Focus(
         autofocus: true,
@@ -33,22 +33,22 @@ class TitleSlide extends StatelessWidget {
   }
 }
 
-class _BackPageAction extends Action<BackPageIntent> {
-  _BackPageAction(this.context);
+class _BackAction extends Action<BackIntent> {
+  _BackAction(this.context);
 
   final BuildContext context;
 
   @override
-  void invoke(BackPageIntent intent) {}
+  void invoke(BackIntent intent) {}
 }
 
-class _NextPageAction extends Action<NextPageIntent> {
-  _NextPageAction(this.context);
+class _NextAction extends Action<NextIntent> {
+  _NextAction(this.context);
 
   final BuildContext context;
 
   @override
-  void invoke(NextPageIntent intent) {
+  void invoke(NextIntent intent) {
     context.push('/1');
   }
 }

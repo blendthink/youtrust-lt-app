@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class BackPageIntent extends Intent {
-  const BackPageIntent();
+class BackIntent extends Intent {
+  const BackIntent();
 }
 
-class NextPageIntent extends Intent {
-  const NextPageIntent();
+class NextIntent extends Intent {
+  const NextIntent();
 }
