@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/components/scaler_gap.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
-import 'package:youtrust_lt_app/slides/title/speaker_name.dart';
+import 'package:youtrust_lt_app/slides/title/speaker_name_label.dart';
 import 'package:youtrust_lt_app/slides/title/title_shader.dart';
 
 class TitleSlide extends StatelessWidget {
@@ -23,7 +23,7 @@ class TitleSlide extends StatelessWidget {
               Spacer(),
               TitleShader(),
               ScalerGap(12),
-              SpeakerName(),
+              SpeakerNameLabel(),
               Spacer(),
             ],
           ),
