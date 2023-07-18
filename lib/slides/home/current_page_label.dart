@@ -3,8 +3,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:youtrust_lt_app/components/scaler_text.dart';
 import 'package:youtrust_lt_app/router/router.dart';
 
-class CurrentPage extends ConsumerWidget {
-  const CurrentPage({super.key});
+class CurrentPageLabel extends ConsumerWidget {
+  const CurrentPageLabel({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

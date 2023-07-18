@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youtrust_lt_app/config.dart';
-import 'package:youtrust_lt_app/slides/home/current_page.dart';
-import 'package:youtrust_lt_app/slides/home/event_name.dart';
+import 'package:youtrust_lt_app/slides/home/current_page_label.dart';
+import 'package:youtrust_lt_app/slides/home/event_name_label.dart';
 
 class HomeSlide extends StatelessWidget {
   const HomeSlide({
@@ -25,8 +25,8 @@ class HomeSlide extends StatelessWidget {
             child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                EventName(),
-                CurrentPage(),
+                EventNameLabel(),
+                CurrentPageLabel(),
               ],
             ),
           ),
