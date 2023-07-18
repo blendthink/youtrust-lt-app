@@ -13,11 +13,11 @@ final shellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 final slideRoutes = [
   GoRoute(
-    path: '/0',
+    path: TitleSlide.path,
     builder: (context, state) => const TitleSlide(),
   ),
   GoRoute(
-    path: '/1',
+    path: IntroductionSlide.path,
     builder: (context, state) => const IntroductionSlide(),
   ),
 ];
@@ -26,7 +26,7 @@ final slideRoutes = [
 GoRouter router(RouterRef ref) {
   return GoRouter(
     navigatorKey: rootNavigatorKey,
-    initialLocation: '/0',
+    initialLocation: TitleSlide.path,
     routes: [
       ShellRoute(
         navigatorKey: shellNavigatorKey,

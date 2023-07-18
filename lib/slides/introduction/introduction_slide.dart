@@ -5,6 +5,8 @@ import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
 class IntroductionSlide extends StatelessWidget {
   const IntroductionSlide({super.key});
 
+  static const path = '/1';
+
   @override
   Widget build(BuildContext context) {
     return Actions(

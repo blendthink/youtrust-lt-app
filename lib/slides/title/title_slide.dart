@@ -8,6 +8,8 @@ import 'package:youtrust_lt_app/slides/title/title_shader.dart';
 class TitleSlide extends StatelessWidget {
   const TitleSlide({super.key});
 
+  static const path = '/0';
+
   @override
   Widget build(BuildContext context) {
     return Actions(
