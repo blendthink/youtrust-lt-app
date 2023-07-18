@@ -36,3 +36,5 @@ flutter:
   uses-material-design: true
   shaders:
     - shaders/title.frag
+  assets:
+    - assets/
