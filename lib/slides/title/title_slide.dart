@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/components/scaler_gap.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
 import 'package:youtrust_lt_app/slides/title/speaker_name_label.dart';
+import 'package:youtrust_lt_app/slides/title/title_background_shader.dart';
 import 'package:youtrust_lt_app/slides/title/title_shader.dart';
 
 class TitleSlide extends StatelessWidget {
@@ -20,13 +21,24 @@ class TitleSlide extends StatelessWidget {
       child: const Focus(
         autofocus: true,
         child: Scaffold(
-          body: Column(
+          body: Stack(
             children: [
-              Spacer(),
-              TitleShader(),
-              ScalerGap(12),
-              SpeakerNameLabel(),
-              Spacer(),
+              TitleBackgroundShader(),
+              Row(
+                children: [
+                  ScalerGap(36),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ScalerGap(36),
+                      TitleShader(),
+                      ScalerGap(12),
+                      SpeakerNameLabel(),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),

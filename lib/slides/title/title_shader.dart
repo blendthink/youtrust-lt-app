@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shaders/flutter_shaders.dart';
+import 'package:youtrust_lt_app/components/scaler_text.dart';
 import 'package:youtrust_lt_app/components/ticking_builder.dart';
 
 class TitleShader extends StatelessWidget {
@@ -7,6 +8,13 @@ class TitleShader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: replace with shader
+    final theme = Theme.of(context);
+    return ScalerText(
+      text: 'How to create presentation using Flutter',
+      style: theme.textTheme.headlineMedium,
+    );
+
     final width = MediaQuery.sizeOf(context).width;
     final size = Size(
       width,
