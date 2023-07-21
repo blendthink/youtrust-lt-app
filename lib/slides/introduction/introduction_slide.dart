@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/components/scaler_gap.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/introduction/introduction_background_shader.dart';
 import 'package:youtrust_lt_app/slides/introduction/self_introduction.dart';
 import 'package:youtrust_lt_app/slides/introduction/speaker_avatar.dart';
 
@@ -20,15 +21,20 @@ class IntroductionSlide extends StatelessWidget {
       child: const Focus(
         autofocus: true,
         child: Scaffold(
-          body: Center(
-            child: Row(
-              children: [
-                ScalerGap(36),
-                SpeakerAvatar(),
-                ScalerGap(36),
-                SelfIntroduction(),
-              ],
-            ),
+          body: Stack(
+            children: [
+              IntroductionBackgroundShader(),
+              Center(
+                child: Row(
+                  children: [
+                    ScalerGap(36),
+                    SpeakerAvatar(),
+                    ScalerGap(36),
+                    SelfIntroduction(),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
