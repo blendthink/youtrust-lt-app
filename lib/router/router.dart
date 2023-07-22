@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:youtrust_lt_app/slides/agenda/agenda_slide.dart';
 import 'package:youtrust_lt_app/slides/home/home_slide.dart';
 import 'package:youtrust_lt_app/router/current_page_observer.dart';
 import 'package:youtrust_lt_app/slides/introduction/introduction_slide.dart';
@@ -19,6 +20,10 @@ final slideRoutes = [
   GoRoute(
     path: IntroductionSlide.path,
     builder: (context, state) => const IntroductionSlide(),
+  ),
+  GoRoute(
+    path: AgendaSlide.path,
+    builder: (context, state) => const AgendaSlide(),
   ),
 ];
 
