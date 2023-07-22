@@ -13,6 +13,27 @@ class TitleSlide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const body = Stack(
+      children: [
+        TitleBackgroundShader(),
+        Row(
+          children: [
+            ScalerGap(36),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ScalerGap(36),
+                TitleShader(),
+                ScalerGap(12),
+                SpeakerNameLabel(),
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
+
     return Actions(
       actions: <Type, Action<Intent>>{
         BackIntent: _BackAction(context),
@@ -21,26 +42,7 @@ class TitleSlide extends StatelessWidget {
       child: const Focus(
         autofocus: true,
         child: Scaffold(
-          body: Stack(
-            children: [
-              TitleBackgroundShader(),
-              Row(
-                children: [
-                  ScalerGap(36),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ScalerGap(36),
-                      TitleShader(),
-                      ScalerGap(12),
-                      SpeakerNameLabel(),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+          body: body,
         ),
       ),
     );

@@ -13,6 +13,22 @@ class IntroductionSlide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const body = Stack(
+      children: [
+        IntroductionBackgroundShader(),
+        Center(
+          child: Row(
+            children: [
+              ScalerGap(36),
+              SpeakerAvatar(),
+              ScalerGap(36),
+              SelfIntroduction(),
+            ],
+          ),
+        ),
+      ],
+    );
+
     return Actions(
       actions: <Type, Action<Intent>>{
         BackIntent: _BackAction(context),
@@ -21,21 +37,7 @@ class IntroductionSlide extends StatelessWidget {
       child: const Focus(
         autofocus: true,
         child: Scaffold(
-          body: Stack(
-            children: [
-              IntroductionBackgroundShader(),
-              Center(
-                child: Row(
-                  children: [
-                    ScalerGap(36),
-                    SpeakerAvatar(),
-                    ScalerGap(36),
-                    SelfIntroduction(),
-                  ],
-                ),
-              ),
-            ],
-          ),
+          body: body,
         ),
       ),
     );
