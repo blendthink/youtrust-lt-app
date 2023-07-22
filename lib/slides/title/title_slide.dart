@@ -34,15 +34,18 @@ class TitleSlide extends StatelessWidget {
       ],
     );
 
-    return Actions(
-      actions: <Type, Action<Intent>>{
-        BackIntent: _BackAction(context),
-        NextIntent: _NextAction(context),
-      },
-      child: const Focus(
-        autofocus: true,
-        child: Scaffold(
-          body: body,
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Actions(
+        actions: <Type, Action<Intent>>{
+          BackIntent: _BackAction(context),
+          NextIntent: _NextAction(context),
+        },
+        child: const Focus(
+          autofocus: true,
+          child: Scaffold(
+            body: body,
+          ),
         ),
       ),
     );
