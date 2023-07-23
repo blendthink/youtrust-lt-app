@@ -5,6 +5,10 @@ import 'package:youtrust_lt_app/slides/agenda/agenda_slide.dart';
 import 'package:youtrust_lt_app/slides/home/home_slide.dart';
 import 'package:youtrust_lt_app/router/current_page_observer.dart';
 import 'package:youtrust_lt_app/slides/introduction/introduction_slide.dart';
+import 'package:youtrust_lt_app/slides/project/creation/project_creation_title_slide.dart';
+import 'package:youtrust_lt_app/slides/project/creation/project_creation_video_slide.dart';
+import 'package:youtrust_lt_app/slides/project/setup/project_setup_title_slide.dart';
+import 'package:youtrust_lt_app/slides/project/setup/project_setup_video_slide.dart';
 import 'package:youtrust_lt_app/slides/title/title_slide.dart';
 
 part 'router.g.dart';
@@ -24,6 +28,22 @@ final slideRoutes = [
   GoRoute(
     path: AgendaSlide.path,
     builder: (context, state) => const AgendaSlide(),
+  ),
+  GoRoute(
+    path: ProjectCreationTitleSlide.path,
+    builder: (context, state) => const ProjectCreationTitleSlide(),
+  ),
+  GoRoute(
+    path: ProjectCreationVideoSlide.path,
+    builder: (context, state) => const ProjectCreationVideoSlide(),
+  ),
+  GoRoute(
+    path: ProjectSetupTitleSlide.path,
+    builder: (context, state) => const ProjectSetupTitleSlide(),
+  ),
+  GoRoute(
+    path: ProjectSetupVideoSlide.path,
+    builder: (context, state) => const ProjectSetupVideoSlide(),
   ),
 ];
 

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
-import 'package:youtrust_lt_app/slides/project/creation/project_creation_title_slide.dart';
+import 'package:youtrust_lt_app/slides/project/setup/project_setup_video_slide.dart';
 
-class AgendaSlide extends StatelessWidget {
-  const AgendaSlide({super.key});
+class ProjectSetupTitleSlide extends StatelessWidget {
+  const ProjectSetupTitleSlide({super.key});
 
-  static const path = '/2';
+  static const path = '/5';
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +50,6 @@ class _NextAction extends Action<NextIntent> {
 
   @override
   void invoke(NextIntent intent) {
-    context.push(ProjectCreationTitleSlide.path);
+    context.push(ProjectSetupVideoSlide.path);
   }
 }

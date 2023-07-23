@@ -1,0 +1,115 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:media_kit/media_kit.dart';
+import 'package:media_kit_video/media_kit_video.dart';
+import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/project/setup/project_setup_title_slide.dart';
+
+class ProjectCreationVideoSlide extends StatefulWidget {
+  const ProjectCreationVideoSlide({super.key});
+
+  static const path = '/4';
+
+  @override
+  State<ProjectCreationVideoSlide> createState() =>
+      _ProjectCreationVideoSlideState();
+}
+
+class _ProjectCreationVideoSlideState extends State<ProjectCreationVideoSlide> {
+  late final Player _player;
+  late final VideoController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _player = Player();
+    _controller = VideoController(_player);
+    _player.open(
+      Media(
+        'asset://assets/project_creation.mov',
+      ),
+      play: false,
+    );
+  }
+
+  @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+    final body = Center(
+      child: SizedBox(
+        width: size.width,
+        height: size.width * 8.0 / 16.0,
+        child: Video(controller: _controller),
+      ),
+    );
+
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Actions(
+        actions: <Type, Action<Intent>>{
+          BackIntent: _BackAction(context, _player),
+          NextIntent: _NextAction(context, _player),
+        },
+        child: Focus(
+          autofocus: true,
+          child: Scaffold(
+            body: body,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _BackAction extends Action<BackIntent> {
+  _BackAction(this.context, this.player);
+
+  final BuildContext context;
+  final Player player;
+
+  @override
+  void invoke(BackIntent intent) {
+    const initPosition = Duration.zero;
+    final state = player.state;
+    if (state.position == initPosition) {
+      context.pop();
+      return;
+    }
+
+    if (state.playing) {
+      player.pause();
+    } else {
+      player.seek(initPosition);
+    }
+  }
+}
+
+class _NextAction extends Action<NextIntent> {
+  _NextAction(this.context, this.player);
+
+  final BuildContext context;
+  final Player player;
+
+  @override
+  void invoke(NextIntent intent) {
+    const lastPosition =
+        Duration(minutes: 1, seconds: 12, microseconds: 602018);
+    final state = player.state;
+    if (state.position == lastPosition) {
+      context.push(ProjectSetupTitleSlide.path);
+      return;
+    }
+
+    if (state.playing) {
+      player.seek(lastPosition);
+    } else {
+      player.play();
+    }
+  }
+}
