@@ -27,7 +27,7 @@ class _ProjectStructureVideoSlideState
     _controller = VideoController(_player);
     _player.open(
       Media(
-        'asset://assets/project_setup.mov',
+        'asset://assets/structure.mov',
       ),
       play: false,
     );
@@ -100,7 +100,7 @@ class _NextAction extends Action<NextIntent> {
   @override
   void invoke(NextIntent intent) {
     const lastPosition =
-        Duration(minutes: 1, seconds: 25, microseconds: 533333);
+        Duration(minutes: 2, seconds: 13, microseconds: 216666);
     final state = player.state;
     if (state.position == lastPosition) {
       context.push(ConclusionTitleSlide.path);
