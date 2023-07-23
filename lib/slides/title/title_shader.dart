@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_shaders/flutter_shaders.dart';
 import 'package:youtrust_lt_app/components/scaler_text.dart';
 import 'package:youtrust_lt_app/components/ticking_builder.dart';
@@ -10,10 +11,26 @@ class TitleShader extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: replace with shader
     final theme = Theme.of(context);
-    return ScalerText(
+    Widget title = ScalerText(
       text: 'How to create presentation using Flutter',
       style: theme.textTheme.headlineMedium,
+    ).animate(adapter: ValueAdapter(0.5)).shimmer(
+      duration: 800.ms,
+      colors: [
+        const Color(0xFFFFFF00),
+        const Color(0xFF00FF00),
+        const Color(0xFF00FFFF),
+        const Color(0xFF0033FF),
+      ],
     );
+
+    title = title
+        .animate(onPlay: (controller) => controller.repeat(reverse: true))
+        .saturate(delay: 1.seconds, duration: 2.seconds)
+        .then() // set baseline time to previous effect's end time
+        .tint(color: const Color(0xFF80DDFF));
+
+    return title;
 
     final width = MediaQuery.sizeOf(context).width;
     final size = Size(
@@ -24,7 +41,7 @@ class TitleShader extends StatelessWidget {
       builder: (context, time) {
         return ShaderBuilder(
           assetKey: 'shaders/title.frag',
-              (context, shader, child) => CustomPaint(
+          (context, shader, child) => CustomPaint(
             size: size,
             painter: _TitleShaderPainter(shader, time),
           ),
