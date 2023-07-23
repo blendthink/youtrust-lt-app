@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:youtrust_lt_app/components/scaler_gap.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/agenda/agenda_title.dart';
+import 'package:youtrust_lt_app/slides/agenda/agenda_headline.dart';
 import 'package:youtrust_lt_app/slides/project/creation/project_creation_title_slide.dart';
+
+const agendaTitle01 = '01 プロジェクト作成';
+const agendaTitle02 = '02 ウィンドウ設定';
+const agendaTitle03 = '03 画面構成';
+const agendaTitle04 = '04 おわりに';
 
 class AgendaSlide extends StatelessWidget {
   const AgendaSlide({super.key});
@@ -11,7 +19,26 @@ class AgendaSlide extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const body = Stack(
-      children: [],
+      children: [
+        Row(
+          children: [
+            ScalerGap(36),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ScalerGap(12),
+                AgendaHeadline(),
+                AgendaTitle(agendaTitle01),
+                AgendaTitle(agendaTitle02),
+                AgendaTitle(agendaTitle03),
+                AgendaTitle(agendaTitle04),
+                ScalerGap(24),
+              ],
+            ),
+          ],
+        ),
+      ],
     );
 
     return WillPopScope(
