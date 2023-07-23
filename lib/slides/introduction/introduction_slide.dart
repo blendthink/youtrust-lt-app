@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/components/scaler_gap.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/agenda/agenda_slide.dart';
 import 'package:youtrust_lt_app/slides/introduction/introduction_background_shader.dart';
 import 'package:youtrust_lt_app/slides/introduction/self_introduction.dart';
 import 'package:youtrust_lt_app/slides/introduction/speaker_avatar.dart';
@@ -65,6 +66,6 @@ class _NextAction extends Action<NextIntent> {
 
   @override
   void invoke(NextIntent intent) {
-    context.push('/2');
+    context.push(AgendaSlide.path);
   }
 }
