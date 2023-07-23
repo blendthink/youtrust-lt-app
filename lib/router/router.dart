@@ -9,6 +9,7 @@ import 'package:youtrust_lt_app/slides/project/creation/project_creation_title_s
 import 'package:youtrust_lt_app/slides/project/creation/project_creation_video_slide.dart';
 import 'package:youtrust_lt_app/slides/project/setup/project_setup_title_slide.dart';
 import 'package:youtrust_lt_app/slides/project/setup/project_setup_video_slide.dart';
+import 'package:youtrust_lt_app/slides/project/structure/project_structure_title_slide.dart';
 import 'package:youtrust_lt_app/slides/title/title_slide.dart';
 
 part 'router.g.dart';
@@ -44,6 +45,10 @@ final slideRoutes = [
   GoRoute(
     path: ProjectSetupVideoSlide.path,
     builder: (context, state) => const ProjectSetupVideoSlide(),
+  ),
+  GoRoute(
+    path: ProjectStructureTitleSlide.path,
+    builder: (context, state) => const ProjectStructureTitleSlide(),
   ),
 ];
 
