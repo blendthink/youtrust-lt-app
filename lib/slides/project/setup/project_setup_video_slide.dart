@@ -96,7 +96,7 @@ class _NextAction extends Action<NextIntent> {
 
   @override
   void invoke(NextIntent intent) {
-    const lastPosition = Duration(seconds: 42, microseconds: 783333);
+    const lastPosition = Duration(minutes: 1, seconds: 25, microseconds: 533333);
     final state = player.state;
     if (state.position == lastPosition) {
       // TODO: next page

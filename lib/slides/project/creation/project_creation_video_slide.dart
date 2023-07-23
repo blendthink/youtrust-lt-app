@@ -98,7 +98,7 @@ class _NextAction extends Action<NextIntent> {
 
   @override
   void invoke(NextIntent intent) {
-    const lastPosition = Duration(seconds: 17, microseconds: 750000);
+    const lastPosition = Duration(seconds: 35, microseconds: 466666);
     final state = player.state;
     if (state.position == lastPosition) {
       context.push(ProjectSetupTitleSlide.path);
