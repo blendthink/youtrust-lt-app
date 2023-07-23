@@ -10,8 +10,7 @@ class ProjectSetupVideoSlide extends StatefulWidget {
   static const path = '/6';
 
   @override
-  State<ProjectSetupVideoSlide> createState() =>
-      _ProjectSetupVideoSlideState();
+  State<ProjectSetupVideoSlide> createState() => _ProjectSetupVideoSlideState();
 }
 
 class _ProjectSetupVideoSlideState extends State<ProjectSetupVideoSlide> {
@@ -97,8 +96,7 @@ class _NextAction extends Action<NextIntent> {
 
   @override
   void invoke(NextIntent intent) {
-    const lastPosition =
-    Duration(minutes: 1, seconds: 12, microseconds: 602018);
+    const lastPosition = Duration(seconds: 42, microseconds: 783333);
     final state = player.state;
     if (state.position == lastPosition) {
       // TODO: next page
