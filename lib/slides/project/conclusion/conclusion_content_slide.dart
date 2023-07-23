@@ -4,6 +4,7 @@ import 'package:flutter_shaders/flutter_shaders.dart';
 import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/components/scaler_text.dart';
 import 'package:youtrust_lt_app/components/ticking_builder.dart';
+import 'package:youtrust_lt_app/config.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
 import 'package:youtrust_lt_app/slides/project/conclusion/conclusion_slide.dart';
 
@@ -29,7 +30,7 @@ class ConclusionContentSlide extends StatelessWidget {
             SizedBox.square(
               dimension: size,
               child: Center(
-                child: const FlutterLogo(size: 78)
+                child: FlutterLogo(size: 78 * context.appScale)
                     .animate(
                       onPlay: (controller) => controller.repeat(),
                     )

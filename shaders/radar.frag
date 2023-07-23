@@ -123,7 +123,7 @@ void main() {
     vec2 fragCoord = FlutterFragCoord();
 
     vec3 finalColor;
-    vec2 uv = fragCoord.xy * 2.8 - vec2(240.0);
+    vec2 uv = fragCoord.xy;
     //center of the image
     vec2 c = iResolution.xy/2.0;
     finalColor = vec3(0.3*_cross(uv, c, 240.0));
