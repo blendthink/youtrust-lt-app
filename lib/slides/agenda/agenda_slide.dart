@@ -29,10 +29,22 @@ class AgendaSlide extends StatelessWidget {
               children: [
                 ScalerGap(12),
                 AgendaHeadline(),
-                AgendaTitle(agendaTitle01),
-                AgendaTitle(agendaTitle02),
-                AgendaTitle(agendaTitle03),
-                AgendaTitle(agendaTitle04),
+                Padding(
+                  padding: EdgeInsets.only(left: 24),
+                  child: AgendaTitle(agendaTitle01),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 24),
+                  child: AgendaTitle(agendaTitle02),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 24),
+                  child: AgendaTitle(agendaTitle03),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 24),
+                  child: AgendaTitle(agendaTitle04),
+                ),
                 ScalerGap(24),
               ],
             ),
