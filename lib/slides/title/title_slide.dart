@@ -19,16 +19,19 @@ class TitleSlide extends StatelessWidget {
         Row(
           children: [
             ScalerGap(36),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ScalerGap(36),
-                TitleShader(),
-                ScalerGap(12),
-                SpeakerNameLabel(),
-              ],
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ScalerGap(36),
+                  TitleShader(),
+                  ScalerGap(12),
+                  SpeakerNameLabel(),
+                ],
+              ),
             ),
+            ScalerGap(12),
           ],
         ),
       ],
