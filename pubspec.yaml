@@ -44,5 +44,6 @@ flutter:
     - shaders/title.frag
     - shaders/title_background.frag
     - shaders/introduction_background.frag
+    - shaders/radar.frag
   assets:
     - assets/
