@@ -1,20 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:youtrust_lt_app/components/display_title.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
-import 'package:youtrust_lt_app/slides/agenda/agenda_slide.dart';
-import 'package:youtrust_lt_app/slides/project/structure/project_structure_introduction_slide.dart';
 
-class ProjectStructureTitleSlide extends StatelessWidget {
-  const ProjectStructureTitleSlide({super.key});
+class ProjectStructureIntroductionSlide extends StatelessWidget {
+  const ProjectStructureIntroductionSlide({super.key});
 
-  static const path = '/7';
+  static const path = '/8';
 
   @override
   Widget build(BuildContext context) {
-    const body = Center(
-      child: DisplayTitle(agendaTitle03),
-    );
+    const body = SizedBox.shrink();
 
     return WillPopScope(
       onWillPop: () async => false,
@@ -51,7 +46,5 @@ class _NextAction extends Action<NextIntent> {
   final BuildContext context;
 
   @override
-  void invoke(NextIntent intent) {
-    context.push(ProjectStructureIntroductionSlide.path);
-  }
+  void invoke(NextIntent intent) {}
 }
