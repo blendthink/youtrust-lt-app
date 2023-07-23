@@ -5,6 +5,9 @@ import 'package:youtrust_lt_app/slides/agenda/agenda_slide.dart';
 import 'package:youtrust_lt_app/slides/home/home_slide.dart';
 import 'package:youtrust_lt_app/router/current_page_observer.dart';
 import 'package:youtrust_lt_app/slides/introduction/introduction_slide.dart';
+import 'package:youtrust_lt_app/slides/project/conclusion/conclusion_content_slide.dart';
+import 'package:youtrust_lt_app/slides/project/conclusion/conclusion_slide.dart';
+import 'package:youtrust_lt_app/slides/project/conclusion/conclusion_title_slide.dart';
 import 'package:youtrust_lt_app/slides/project/creation/project_creation_title_slide.dart';
 import 'package:youtrust_lt_app/slides/project/creation/project_creation_video_slide.dart';
 import 'package:youtrust_lt_app/slides/project/setup/project_setup_title_slide.dart';
@@ -59,6 +62,18 @@ final slideRoutes = [
   GoRoute(
     path: ProjectStructureVideoSlide.path,
     builder: (context, state) => const ProjectStructureVideoSlide(),
+  ),
+  GoRoute(
+    path: ConclusionTitleSlide.path,
+    builder: (context, state) => const ConclusionTitleSlide(),
+  ),
+  GoRoute(
+    path: ConclusionContentSlide.path,
+    builder: (context, state) => const ConclusionContentSlide(),
+  ),
+  GoRoute(
+    path: ConclusionSlide.path,
+    builder: (context, state) => const ConclusionSlide(),
   ),
 ];
 

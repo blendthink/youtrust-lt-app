@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/project/conclusion/conclusion_title_slide.dart';
 
 class ProjectStructureVideoSlide extends StatefulWidget {
   const ProjectStructureVideoSlide({super.key});
@@ -102,6 +103,7 @@ class _NextAction extends Action<NextIntent> {
         Duration(minutes: 1, seconds: 25, microseconds: 533333);
     final state = player.state;
     if (state.position == lastPosition) {
+      context.push(ConclusionTitleSlide.path);
       return;
     }
 
