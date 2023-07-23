@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/project/structure/project_structure_video_slide.dart';
 
 class ProjectStructureIntroductionSlide extends StatelessWidget {
   const ProjectStructureIntroductionSlide({super.key});
@@ -46,5 +47,7 @@ class _NextAction extends Action<NextIntent> {
   final BuildContext context;
 
   @override
-  void invoke(NextIntent intent) {}
+  void invoke(NextIntent intent) {
+    context.push(ProjectStructureVideoSlide.path);
+  }
 }
