@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:youtrust_lt_app/components/display_title.dart';
 import 'package:youtrust_lt_app/shortcuts/app_intents.dart';
+import 'package:youtrust_lt_app/slides/agenda/agenda_slide.dart';
 import 'package:youtrust_lt_app/slides/project/creation/project_creation_video_slide.dart';
 
 class ProjectCreationTitleSlide extends StatelessWidget {
@@ -10,8 +12,8 @@ class ProjectCreationTitleSlide extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const body = Stack(
-      children: [],
+    const body = Center(
+      child: DisplayTitle(agendaTitle01),
     );
 
     return WillPopScope(
